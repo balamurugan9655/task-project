@@ -33,7 +33,7 @@
                 <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"/>
               </svg>
               <span id="notificationValue" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                2+
+                1+
                 <span class="visually-hidden">unread messages</span>
               </span>
             </button>
@@ -93,7 +93,6 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="ms-4 bi bi-gear-fill" viewBox="0 0 16 16">
               <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
             </svg>
-            <!-- <span class="top-0 start-0 ps-4"> Settings</span> -->
           </a>
         </li>
         <li class="nav-item">
@@ -143,7 +142,8 @@
                     <a href="#" class="btn btn-outline-primary mb-2 link-underline-light">Add Signatures</a>
                     <a href="#" class="btn btn-outline-primary mb-2 link-underline-light">Will Generation</a>
                 </div>
-                <div class="chate-table">
+                <div class="chate-table" id="tableDiv">
+
                   <table class="table table-hover container" id="table">
                     <thead>
                       <tr>
@@ -156,59 +156,14 @@
                       </tr>
                     </thead>
                     <tbody id="tBody">
-                      <tr>
-                        <td scope="col">1</td>
-                        <td>Balamurugan</td>
-                        <td>Brother</td>
-                        <td>2001-06-02</td>
-                        <td class="text-success">Active</td>
-                        <td class="text-center text-md-start" id="iBtn">
-                          <button href="#" class="btn btn-primary" id="btnSVG1">  
-                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                              <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                              <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
-                            </svg> -->
-                            Edit
-                          </button>
-                          <button href="#" class="btn btn-primary mt-1 mt-md-0 mt-lg-0" id="btnSVG2" onclick="delect(this)"> 
-                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
-                              <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5"/>
-                            </svg> -->
-                            Del
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td scope="col">2</td>
-                        <td>Bala</td>
-                        <td>Brother</td>
-                        <td>2024-06-02</td>
-                        <td class="text-success">active</td>
-                        <td class="text-center text-md-start">
-                          <button href="#" class="btn btn-primary" id="btnSVG1">  
-                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                              <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                              <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
-                            </svg> -->
-                            Edit
-                          </button>
-                          <button href="#" class="btn btn-primary mt-1 mt-md-0 mt-lg-0" id="btnSVG2" onclick="delect(this)"> 
-                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
-                              <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5"/>
-                            </svg> -->
-                            Del
-                          </button>
-                        </td>
-                      </tr>
-
                     </tbody>
                   </table>
                 </div>
                 <h3>Add New Beneficiary</h3>
-                <form action="#" class="ms-5 me-5">
+                <div class="ms-5 me-5">
                   <div class="mb-2">
                     <label for="S-No" class="form-label">S.No : </label>
-                    <input type="number" class="form-control" id="No" >
+                    <input type="number" class="form-control " disabled id="No" >
                   </div>
                   <div class="mb-2">
                     <label for="Name">Name : </label>
@@ -216,14 +171,21 @@
                   </div>
                   <div class="mb-2">
                     <label for="Relationship">Relationship : </label>
-                    <input type="text" class="form-control" id="AddRel" required>
+                     <select class="form-control" id="AddRel">
+                        <option value="none">None</option>
+                        <option value="Father">Father</option>
+                        <option value="Mother">Mother</option>
+                        <option value="Brother">Brother</option>
+                        <option value="Sister">Sister</option>
+                        <option value="Friend">Friend</option>
+                     </select>
                   </div>
                   <div class="mb-2">
                     <label for="Date-Of-Birth">Date Of Birth : </label>
-                    <input type="date" class="form-control" id="AddDOB" required>
+                    <input type="date" class="form-control" id="AddDOB" onblur="ck()" required>
                   </div>
-                  <input type="submit" class="btn btn-outline-primary m-2" onclick="Add()">
-                </form>
+                  <input type="submit" class="btn btn-outline-primary m-2 disabled" onclick="tableCreat()" id="SubmitBtn">
+                </div>
             </div>
         </div>
     </div>
@@ -232,115 +194,179 @@
 
   <script src="script.js"></script>
   <script>
-      //variable assign
-    let wish1 = document.getElementById("wish1");
-    let uName = document.getElementById("uName");
-    let DateOfCreation = document.getElementById("dateOfCreation");
-      //localStorage vItem get
-    wish1.innerHTML = localStorage.getItem("wish");
-    uName.innerHTML = localStorage.getItem("UserName").toUpperCase();
-    DateOfCreation.innerHTML = localStorage.getItem("DateOfBirth");
+            //  variable assign
+        let wish1 = document.getElementById("wish1");
+        let uName = document.getElementById("uName");
+        let DateOfCreation = document.getElementById("dateOfCreation");
+            //  localStorage vItem get
+        wish1.innerHTML = localStorage.getItem("wish");
+        uName.innerHTML = localStorage.getItem("UserName").toUpperCase();
+        DateOfCreation.innerHTML = localStorage.getItem("DateOfBirth");
 
-      //table code
-    const tBody = document.getElementById("tBody");
-      //table => get svg icon 
-    const btnSVG1 = document.getElementById("btnSVG1");
-    const btnSVG2 = document.getElementById("btnSVG2");
+            //  table Body Select 
+        const tBody = document.getElementById("tBody");
+            //  table ROW create
+        let tRow = document.createElement("tr");
+        tBody.appendChild(tRow);
 
-    console.log(btnSVG1);
-    console.log(btnSVG2);
+            // default td value
+        var sNo = 2;
+        let fNo = 1;
+        let URname = localStorage.getItem("UserName");
+        let UR = "Brother";
+        let setDob = localStorage.getItem("DateOfBirth");
+        let Active = "Active";
+        let td1,td2,td3,td4,td5,td6;
+        crtEle(td1,fNo)
+        crtEle(td2,URname)
+        crtEle(td3,UR)
+        crtEle(td4,setDob)
+        crtEle(td5,Active)
+        //  crtEle(td6,tt)  // button add function
+        
+          //  table date number 6 create
+        td6 = document.createElement("td");
+
+        let btn1,btn2;    // btn Variable
+        let Edit = "Edit" // btn Name
+        let Delect ="Del" // btn Name
+        let Eid  = "eId"; //btn Id Name
+        let Did = "dId";  //btn Id Name
+        crtBtn(btn1,Edit,Eid);  
+        crtBtn(btn2,Delect,Did);
+
+            // button create function
+        function crtBtn(btnVbl,btnName,btnIdName){    //  btnVbl = btn Variable , btnName = btn Name , btnIdname = btn Id Name
+            btnVbl = document.createElement("button");
+            btnVbl.setAttribute("class","btn btn-primary me-1 me-md-1");
+            btnVbl.setAttribute("id",btnIdName)
+            let btnAction = document.createTextNode(btnName);
+            btnVbl.appendChild(btnAction);
+            td6.appendChild(btnVbl);
+            tRow.appendChild(td6)
+            //console.log(btnVbl)
+        }
+
+            //btn Onclick Function Create
+        const dltBtn = document.getElementById("dId");
+        dltBtn.setAttribute("onclick","del(this)")
+        console.log(dltBtn);
+            // table Row Delect Function code
+        function del(r){
+          let i = r.parentNode.parentNode.rowIndex;
+          tBody.deleteRow(i-1);
+        }
+
+            // S.No
+        const ordNbm = document.getElementById("No");
+        ordNbm.setAttribute("value",sNo);
+       
+        //  table date add function
+    function tableCreat(){
+
+             // S.No
+        sNo++;
+        const ordNbm = document.getElementById("No");
+        ordNbm.setAttribute("value",sNo);
+
+            // get value 
+        let AddName = document.getElementById("AddName").value;
+        let AddRel = document.getElementById("AddRel").value;
+        let AddDob = document.getElementById("AddDOB").value;
+            // table row create with click function scope
+        let tRow = document.createElement("tr");
+        tBody.appendChild(tRow);
+
+          //table date create 
+        let autoNum = sNo;
+        autoNum = autoNum - 1;
+        let Active = "Active";
+        let td1,td2,td3,td4,td5,td6;
+        crtEle(td1,autoNum)
+        crtEle(td2,AddName)
+        crtEle(td3,AddRel)
+        crtEle(td4,AddDob)
+        crtEle(td5,Active)
+        // crtEle(td6,tt)
+        td6 = document.createElement("td");
+
+        let btn1,btn2;
+        let Edit = "Edit"
+        let Delect ="Del"
+        let Eid  = "eId";
+        let Did = "dId";
+        let editClk = "edit(this)" ;
+        let delClk = "del(this)";
+        crtBtn(btn1,Edit,Eid,editClk);  
+        crtBtn(btn2,Delect,Did,delClk);
+
+              // btn create function and set attribute
+        function crtBtn(btnVbl,btnName,btnIdName,clickbtn){  // btnVbl = button variable , btnName = button name contant , btnIdName = btn Id Name , clickbtn = onClick function name
+            btnVbl = document.createElement("button");
+            btnVbl.setAttribute("class","btn btn-primary me-1 me-md-1");
+            btnVbl.setAttribute("id",btnIdName)
+            btnVbl.setAttribute("onclick",clickbtn)
+            let btnAction = document.createTextNode(btnName);
+            btnVbl.appendChild(btnAction);
+            td6.appendChild(btnVbl);
+            tRow.appendChild(td6)
+            console.log(btnVbl)
+        }
+
+          //delect function
+        function del(r){
+          let i = r.parentNode.parentNode.rowIndex;
+          tBody.deleteRow(i);
+          console.log("bala")
+        }
+
+          // btn create function
+        function crtEle(n,b)    // n is td variable & b is td contant
+        {
+        let x;
+        n = document.createElement("td");
+        x = document.createTextNode(b);
+        n.appendChild(x);
+        tRow.appendChild(n);   
+        }
+
+      console.log(tBody.rows.length);
+
+          // notificationValue
+      let notificationValue = document.getElementById("notificationValue");
+      notificationValue.innerHTML = tBody.rows.length + "+";
+    }
     
-      //let n1 = 3;
-      let No = document.getElementById("No");
-      
-    
-    function Add() {
-      
-      let AddName = document.getElementById("AddName").value;
-      let AddRel = document.getElementById("AddRel").value;
-      let AddDOB = document.getElementById("AddDOB").value;
-      console.log(AddName)
-      //let No = document.getElementById("No");
-      let tdNum = No.value;
-      No.setAttribute("value",tdNum);
-      
-      console.log(tdNum);
-      
-      let TableRow = document.createElement("tr");
-      tBody.appendChild(TableRow);
-
-      let td1 = document.createElement("td");
-      let td2 = document.createElement("td");
-      let td3 = document.createElement("td");
-      let td4 = document.createElement("td");
-      let td5 = document.createElement("td");
-      let td6 = document.createElement("td");
-
-      const btnSVG1 = document.getElementById("btnSVG1");
-      const btnSVG2 = document.getElementById("btnSVG2");
-
-      let btn1 = document.createElement("button");
-      btn1.setAttribute("class","btn btn-primary me-1 me-md-1 disabled");
-
-      
-      let e1 = "Edit" ;
-      let bt1 = document.createTextNode(e1)
-      btn1.appendChild(bt1);
-      td6.appendChild(btn1);
-      
-      td6.appendChild(btn1)
-
-
-      let btn2 = document.createElement("button");
-      btn2.setAttribute("class","btn btn-primary mt-1 mt-md-0 mt-lg-0 disabled");
-      //btn2.setAttribute("onclick","del()");
-      console.log(btn2)
-      let e = "Del" ;
-      let bt = document.createTextNode(e)
-      btn2.appendChild(bt);
-      td6.appendChild(btn2);
-      
-      td6.appendChild(btn2)
-
-      //td6.appendChild(span1,span2)
-
-      var notd1 = document.createTextNode(tdNum);
-      td1.appendChild(notd1);
-
-      let Nametd2 =document.createTextNode(AddName);
-      td2.appendChild(Nametd2);
-
-      let AddReltd3 = document.createTextNode(AddRel);
-      td3.appendChild(AddReltd3);
-
-      let AddDOBtd4 = document.createTextNode(AddDOB);
-      td4.appendChild(AddDOBtd4);
-
-      const atv ="In-Active";
-      console.log(typeof(atv))
-      let textActive = document.createTextNode(atv);
-      td5.appendChild(textActive);
-
-      td5.setAttribute("class","text-danger")
-
-      console.log(btnSVG1)
-      
-      TableRow.appendChild(td1);
-      TableRow.appendChild(td2);
-      TableRow.appendChild(td3);
-      TableRow.appendChild(td4);
-      TableRow.appendChild(td5);
-      TableRow.appendChild(td6);
-      //  console.log(sNo)
-      console.log(td1);
-
+        //td create bloct out scope
+    function crtEle(n,b)    // n is td variable & b is td contant
+    {
+        let x;
+        n = document.createElement("td");
+        x = document.createTextNode(b);
+        n.appendChild(x);
+        tRow.appendChild(n);   
     }
 
-    function delect(r) {
-      document.getElementById("tBody").deleteRow(i)
-      var i = r.parentNode.parentNode.rowIndex;
+        // submit btn visible function
+    function ck() {
+        // select input value 
+      let AddName = document.getElementById("AddName");
+      let AddDOB = document.getElementById("AddDOB");
+        // input value is > 1
+      let v1 = AddName.value.length;
+      let d1 =AddDOB.value.length
+      let SubmitBtn = document.getElementById("SubmitBtn");
+      //console.log(v1,d1);
+      
+            // if condition statement
+      if(v1>1 && d1>1){
+          SubmitBtn.setAttribute("class","btn btn-outline-primary m-2");
+        }
+      else{
+          SubmitBtn.setAttribute("class","disabled btn btn-outline-primary m-2");
+        }
     }
-    
+
   </script>
 
 </body>
